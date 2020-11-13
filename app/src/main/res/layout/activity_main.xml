@@ -145,22 +145,19 @@
         android:id="@+id/radioButton"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:background="@color/design_default_color_surface"
         android:text="Hombre"
         android:textColor="#33210C"
         android:textColorHighlight="@color/black"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/radioButton3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <RadioButton
         android:id="@+id/radioButton3"
@@ -172,8 +169,8 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/radioButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.741"
-        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/radioButton"
         app:layout_constraintVertical_bias="0.0" />
 
