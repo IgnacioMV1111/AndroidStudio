@@ -5,11 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/cardview_default_elevation"
-    android:background="@color/design_default_color_error"
+    android:background="@android:color/darker_gray"
     tools:context=".MainActivity"
 
     >
 
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_error"
+        android:text="Inicia sesion!"
+        android:textColor="@android:color/widget_edittext_dark"
+        android:textSize="25sp"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword"
+        app:layout_constraintVertical_bias="0.776" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -21,7 +37,7 @@
         android:ems="20"
         android:inputType="textPersonName"
         android:text="@string/apellido"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
@@ -39,7 +55,8 @@
         android:ems="20"
         android:inputType="textPersonName"
         android:text="@string/Nombre"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/white"
+        android:textColorLink="@color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +73,7 @@
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:text="@string/correo_electronico"
-        android:textColor="?android:attr/colorMultiSelectHighlight"
+        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,11 +90,14 @@
         android:importantForAutofill="no"
         android:inputType="numberPassword"
         android:text="@string/contrase_a"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="@color/white"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintVertical_bias="0.012"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <Button
@@ -89,18 +109,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword"
+        app:layout_constraintVertical_bias="0.39" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="176dp"
         android:layout_height="184dp"
         android:layout_marginTop="100dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/todo" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -109,13 +130,51 @@
         android:layout_marginTop="20dp"
         android:background="@color/teal_700"
         android:entries="@array/EDAD"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.309"
+
+
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword"
+        app:layout_constraintVertical_bias="0.041" />
 
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/design_default_color_surface"
+        android:text="Hombre"
+        android:textColor="#33210C"
+        android:textColorHighlight="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.042" />
 
-        />
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="Mujer"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toEndOf="@+id/radioButton"
+        app:layout_constraintTop_toTopOf="@+id/radioButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,5 +8,7 @@
     <string name="Apellido" />
     <string name="apellido">Apellido</string>
     <string name="todo">TODO</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
 
 </resources>
